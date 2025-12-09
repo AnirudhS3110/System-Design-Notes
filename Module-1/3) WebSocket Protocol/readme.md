@@ -8,7 +8,7 @@
 - Client will make periodical REQUEST (for data) to the server.
 - If the Server has no data for the Request, it replies with Empty **response** 
 ![alt text](image-2.png)
-- The problem in Polling is the client needs to keep asking the Server if any data is available, which results in creation of lot of new responses and many **empty responses**, whch creates a lot of **HTTP OVERHEAD**
+- The problem in Polling is the client needs to keep asking the Server if any data is available, which results in creation of lot of new Requests and many **empty responses**, whch creates a lot of **HTTP OVERHEAD**
 - This is solved by Long Polling
 ## Long Polling: 
 ![alt text](image-3.png)
@@ -24,7 +24,7 @@
 ## Web Sockets:
 - It's a full Duplex Asynchronous Messaging, so that both server and client can stream messages to each other Independently.
 - It's used to send and Recieve Information Simultaneous using TCP connection
-### WebSocket connection is Initialized n 3 stages:
+### WebSocket connection is Initialized in 3 stages:
 
 
 ### Application
