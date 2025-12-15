@@ -34,5 +34,32 @@
  - Used in Highly Distributed Systems.
  - Server is not alive untill Majority of the other Server Confrims. 
  - This is very smart, as it AVOIDS FALSE POSITIVES!
- - This approach Creates A significant Amount of Network Overhead, as every server is talking to every other server.
+ - This approach Creates A significant Amount of Network Overhead, as every server is talking to every other server
 
+## How Often does the Server Needs to Send Heartbeats?
+- If heartbeats are sent very frequently 1-2 seconds, Results in HIGH Network Congestion and Quickly can be Identified if Failure in any server. All these traffic can slow down the Actual Customewr Request we are trying to Serve
+- If we send Heartbeat every MINUTE to reduce overhead, then the Detection that a server failed will take 3 whole minutes! Which is not welcome, it definitely reduces the Network Congestion.
+- The Sweet Spot depends on the System we are trying to build, For most Web Apss is 10-15 seconds and threshold of 3 missed haertbeats , this results in finding any Failed Server at at most 15 seconds.
+- high traffic application mostly choose 3-5 seconds as the Interval as every second of Downtime Costs money for them
+- backgrounf Processing systems that are not customer facing wil take 15-2 seconds
+- KEY IS MONITORING THE SYSTEM AND ADOPTING ACTUALLY WHAT WORKS!
+
+## Different Patterns of HeartBeats:
+#### Ping Based Heartbeats:
+![alt text](image-3.png)
+- Servers ping each other to inform that they are alive!
+- Straightforward and LIGHTWEIGHT
+#### Gossip Protocol:
+![alt text](image-4.png)
+- It works as how Gossip works in Social Network
+- Instead of everyone to everyone, Server tells that they are alive only to tehir NEIGHBOURS, this message i passed to their other neighbours, this way the message spreads.
+
+#### Leader based HEartbeats and Systems:
+![alt text](image-5.png)
+- One Designated Leader Collects Heartbeat from each server
+- This leader has Centralized Vuew of all the Servers
+- The Leader sends heartbeats to otehr server to prove that its alive
+- If the leader fails, the Other Servers chose another leader
+
+## Tips on System desing:
+- If you geet question on this topic make sure to think about Time out and thresholds
