@@ -25,5 +25,8 @@
 - Example: "we guarantee 99.9% uptime or you get 10% credit", "If availability is lss than 99%, then custiomers get 25% refund", "API abvailabiltiy 99.95% or compensaion."
 - These Contract based, if the cmpanies or devs break them, they need to do as per the Contract
 
-## THe EHirachy:- SLI must be Greater than SLO, and SLO must be greater then SLA.
+## THe Heirarchy:- SLI must be Greater than SLO, and SLO must be greater then SLA.
 ![alt text](image-1.png)
+
+## Error Budgets:
+- If SLO of your company is 99.9%, then Error budget is 0.1%, which provides your company 43 minutes per month for downtime or deployment
