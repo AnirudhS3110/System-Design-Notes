@@ -30,3 +30,8 @@
 
 ## Error Budgets:
 - If SLO of your company is 99.9%, then Error budget is 0.1%, which provides your company 43 minutes per month for downtime or deployment
+
+## Interview POV:
+- You are asked to design a payment
+- Your approach should be, First you should ask what is th Error Budget for this. For example lets assuem lets keep error budget as 99.99% or higher as AVAILABILITY then it would give us approximately 22 minutes per month as error budget
+- Let's commit to the customers as 99.9% SLA
