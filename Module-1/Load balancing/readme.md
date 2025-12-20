@@ -9,6 +9,7 @@
 - Global Server Load Balancing.
 - This is done to redirect traffic across Servers in Different places of the World.
 
+
 ## Types of Load Balancing:
 - 1) Static Load balancing 
 - 2) Dynamic Load Balancing
@@ -23,7 +24,11 @@
 - It determines the routing of the request dynamically at the time of Receiving requests based on Health of servers, Performance of servers, How busy a server is, how much idle a server is.
 - It monitors the health of the server periodically.
 - If a server's throughput is less it redirects Less traffic towards it.
-- **failover**: If a server is dead or Failed, it redirects all the Traffic to the server to other backup servers, this process is called **failover**.
+
+### Failover:
+- If a server is dead or Failed, it redirects all the Traffic to the server to other backup servers, this process is called **failover**.
+
+
 ### Examples:
 - **RESOURCE BASED**: The load balancer assigns Servers based on current resource availability of teh server. Specialized agents run on each server to measure CPU and memory availability of servers. First the Load balancer Queries each agent before distributing thetraffic to he server.
 - **LEAST CONNECTION**: Checks which servers have the fewest connections open at the time and sends traffic to those servers. This assumes all connections require roughly equal processing power.
