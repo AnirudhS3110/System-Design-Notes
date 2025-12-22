@@ -8,3 +8,6 @@
 
 ## Low Latency
 - Low Latency is Expensive, as it involves more complex Infrastructure, more monitoring
+
+### <a href="../2.2) Latency Shaping System's Design/readme.md">Next Section<a>
+### <a href="../readme.md">Previous Section</a>
