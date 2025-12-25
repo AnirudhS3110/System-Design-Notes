@@ -25,3 +25,11 @@
 ### 4) Growth Rate:
 - This involves are we designing for Current Scale or Future Scale<br>
 ![alt text](image-3.png)
+- If there are 1M users rna nd we expect 10M users next year, then we shoudl design in such a way that it accomodates 10M users.
+
+#### NOTE: All these Dimensions Interact with each other
+- 1M users making 100 reqs per day is different from 100M users making 1 Request per day. 
+- Even the number of requests are same, both are different
+- The Architecture needs to be different
+
+## <a href="./3.1) Why Scale is One of the Big 3/readme.md">Next: Why Scale is one of Big 3</a>
