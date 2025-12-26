@@ -32,4 +32,45 @@
 - Applicaton level caching of User Sessions
 - Redis Clusters to cache HOT data.
 
+## 3) Load balancing:
+#### Small Scale:
+- Single Server is enough, NO load balancing is needed
+#### Medium Scale:
+- Multiple Servers behind single Load balancer is sufficient
+#### Large Scale:
+- In large scale, Servers will be present in Different Geographic locations, therefore GLSB(geographic Server Load balancers) is needed
+- That is Load balancers in asia will distribute the traffic among servers in Asia, same in Europe, there will be mulrtiple levels of Load balancing
+- The architecture will also be Microservices, because different services may need different scaling
+
+## 4) Data Storage:
+#### Small Scale:
+- Files on same server
+
+#### Medium Scale:
+- S3 object storage
+
+#### Large Scale:
+- uses CDNs to deliver content globally
+- we choose different levels of Storage Tiers
+- hot storage for frequently accessed contents
+- Cold Storage for archived contents
+- Might also have own CDN infrasturcture as the volume is High
+
+## Anychronous Processing and Queues:
+#### Small Scale:
+- most of the things Synchronously
+#### Medium Scale:
+- Message Queues for heavy Operations
+#### Large Scale:
+- mandatory async processing
+- use Kafka/SQS to handle millions of messages per second
+- Have worker pools which handles jobs in parallel
+- When the queue gets tooo long, it causes BACK PRESSURE, the entire architecture becomes event driven
+
+## NOTE:
+### At Smale Scale Vertical Scaling is Fine
+- Systems which scale only vertia=cally will hit a linmit, and that limit costs too high
+### At Large scale, teh system needs for Horizontal Scaling.
+
 ## <a href="../3.1) Why Scale is One of the Big 3/readme.md">Previous: Why Scale is One of Big 3</a>
+## <a href="../3.3) common mistakes/readme.md">Next: Common Mistakes</a>
