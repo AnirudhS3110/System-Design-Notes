@@ -1,3 +1,5 @@
+
+![alt text](image-3.png)
 ## 1)Database Selection
 ![alt text](image.png)<br>
 - For **STRONG CONSISTENCY** : Use PostgresSQL or MySQL with **Synchronous Repilcaton**, MOngoDB is used for majority Write concern!, BAsiucakly Single Leader Replication where writes are synchronous.
@@ -47,3 +49,27 @@ Use this when small staleness is acceptable in exchange for speed & availability
 ---
 ## 3) Replication Statergy:
 ![alt text](image-2.png)
+- Here is where we feel the Speed of Correctness Statrgy
+### Strong COnsistencyb Flow:(latency: 200ms)
+- 1) User write
+- 2) Primary DB gets it
+- 3) Primay waits till acknowledgement from Replica, only then it will return SUCCESS to user.
+
+### Eventual COnsistenyc FLow:(latency: 10ms)
+- 1) Suer writes
+- 2) Primary gets it
+- 3) Sends success back to the User and writes to itrs replicas eventually
+
+# Drawback of Eventual Consistency:
+- with eventual COnsistency, when 2 users update the value to same it causes a Conflict.
+- **last Write Wins**: this COnflict can be resolved by accepting the value which was written at second/last, but the first user who updated, the value will be lost permanently , wont be in any records, thjis happens in **Cassandra and Dynamo DB**
+
+## Vector Clock
+
+## Conflict Free Replicated Data Types(CFRDT's):
+- These are Special Data Structures which are mathematically designed to MERGE automatically without conflicts
+- **Redis Supports this for Certai Data Structures like counters and sets**
+
+## Application Level:
+
+## <a href="../4.1) Intro To Cap Theorem/readme.md">Previous: Intro to CAP theorem</a>

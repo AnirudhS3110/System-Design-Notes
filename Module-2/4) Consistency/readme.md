@@ -1,4 +1,5 @@
 # Consistency:
+
 - Its about whether the user sees the Correct data/ stale data.
 - There are 2 types of Consistency:
 ## 1) Strong Consistency:
