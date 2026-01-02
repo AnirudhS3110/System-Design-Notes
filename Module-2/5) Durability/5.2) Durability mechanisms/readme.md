@@ -17,3 +17,12 @@
 
 #### 3) Crash Recovery:
 - If the System Crashes while Updating the actual DS but after the WAL entry, when the System Restarts, the Sb Server first runs through the Write Ahead Log, does the changes to the actual DataStructure so that no data loss is there.
+
+## Fsync:
+![alt text](image.png)
+- Its a System Call which Provides Durability at OS level.
+- generall when we store data it fist gets Stored in Write Buffer (RAM) of our Computers
+- Fsync is  System Call which flushes all the memory in the  RAM into the Disk Memory of the computer
+- But fsync is a time consuming operation, it takes few MILLISeconds to complete, in computing terms it costs eternity.
+- Different DBs handles this differenlty:
+![alt text](image-1.png)
