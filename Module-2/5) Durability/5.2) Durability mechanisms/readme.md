@@ -26,3 +26,6 @@
 - But fsync is a time consuming operation, it takes few MILLISeconds to complete, in computing terms it costs eternity.
 - Different DBs handles this differenlty:
 ![alt text](image-1.png)
+
+## <a href="../readme.md"> Prev: Intro</a>
+## <a href="../5.3) Durability Metrics/readme.md"> Next: Durability Metrics</a>
