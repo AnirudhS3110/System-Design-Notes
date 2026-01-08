@@ -26,3 +26,14 @@
 ### Fan-Out on Write
 - Pre-Compute Results while Writing
 - pay the cost on write to create blazing fast read Heavy Systems.
+
+## Wite Heavy Systems:
+![alt text](image-1.png)
+- Use LSM Tree based Trees fo r Write heavy systems
+- Use NoSQL dbs like Xasssandra and RocksDB
+- 10x faster than B-trees
+
+## Statergies:
+### 1) BAtching and Buffering:
+- Instead of writing every Requests, we Buffer them and Write them as Single Request, this Amortizes the Cost across many operations     
+- write ahead logs or commit logs like Kafka Excel here.
