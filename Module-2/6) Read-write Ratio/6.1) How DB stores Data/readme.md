@@ -37,3 +37,7 @@
 ### 1) BAtching and Buffering:
 - Instead of writing every Requests, we Buffer them and Write them as Single Request, this Amortizes the Cost across many operations     
 - write ahead logs or commit logs like Kafka Excel here.
+
+![alt text](image-2.png)
+
+
