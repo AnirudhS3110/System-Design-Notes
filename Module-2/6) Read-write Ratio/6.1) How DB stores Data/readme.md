@@ -40,4 +40,24 @@
 
 ![alt text](image-2.png)
 
+## Heavy Write Cahce problem
+- Every time a write occurs, the cache becomes invalid.
+- Can use Write Through approach which writes to DB as well as Cache
+- OR can cache most reecent data with Short TTL.
+
+## DB architecture for READ HEAVY with COMPLEX QUERIES:
+- SQL dbs like PostgresSQL with DB replicas
+- Uses B-Trees for fast Random Access 
+## DB for Read heavy with Simple Queries and MAssive Scale:
+- Cassandra and Dynamo DB with Caching Layers
+
+## DB for Write Heavy systems
+- Influx DB. Time Scale DB , lakeHouse DB. THese built on LSM Trees and are Optimized for Sequential Writes
+
+## Write Heavy with Eventual Consistency:
+- Cassandra Excels with LSM based Storage Engine
+
+## EXTREME READ WRITE DIFFEENCES:
+- Consider Command Query Responsibility Segregation.
+
 
