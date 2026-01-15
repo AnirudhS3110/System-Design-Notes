@@ -16,4 +16,13 @@
       - These Servers are Connected to the Source Server/Origin Server
    - - Edge Servers (New York server, London server, etc)
       - Edge Servers at the Bottom of the Heirarchy, connected to Tier of Regional Servers
+      - Servers are Spread across Different Geographic Regions and are built to handle Hihg volume of traffic
+      - Caching of Content in Edge Servers enables CDN to deliver COntent Efficiently, without the request hitting the Source Server.
+
+## Popular CDN FrameWorks: <br>
+![alt text](image-2.png)
+- MaxCDN is the Most Cost effective and   and user friendly UI
+- BUt has Small range of Edge Location and Limitted Range of Advanced Features compared to other CDN roviders <br>
+
+![alt text](image-3.png)
   
