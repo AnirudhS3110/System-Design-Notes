@@ -13,3 +13,5 @@
 - 
 
 ## Server based Rate Limitting:
+- SUppose we are building websie o targte only audeince from US
+- So we implement Ratee limitting to all other counttires exept US, therefore reaching out ,ainly only to Customers in US
