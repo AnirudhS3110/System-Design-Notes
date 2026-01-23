@@ -1,6 +1,6 @@
 # Idempotency:
 ## in simple terms:
-- The First request Creates a result/outcome
+- The First request Creates a result/outcom
 - The subsequent Requests creates the same result or Outcome
 
 ## How paypal uses idempotency to make transactions safe
