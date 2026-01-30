@@ -2,3 +2,5 @@
 - Indexing in DBMS is used to speed up data retrieval by minimizing disk scans. Instead of searching through all rows, the DBMS uses index structures to locate data using key values quickly.
 ![alt text](image.png)
 ![alt text](image-1.png)
+![alt text](image-2.png)
+- Database index is like a Reference guide which helps to find data Quickly, without scanning the whole Database
