@@ -3,4 +3,4 @@
 ![alt text](image.png)
 ![alt text](image-1.png)
 ![alt text](image-2.png)
-- Database index is like a Reference guide which helps to find data Quickly, without scanning the whole Database
+- Database index is like a Reference guide which helps to find data Quickly, without scanning the whole DB.
