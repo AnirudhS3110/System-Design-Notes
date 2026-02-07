@@ -1,6 +1,6 @@
 # Single leader Replication:
 - also called primary–replica or master–slave replication
-- database replication model where one node(Leader) is the only one allowed to handle writes, and one or more follower nodes replicate data from it.
+- database replication model where one node(Leader) is the only one allowed to handle writes, and one or more follower nodes replicate data from it
 ### Pros:
 - Simple conflict model (only one node writes → no write conflicts)
 - Easier to reason about correctness
