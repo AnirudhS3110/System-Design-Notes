@@ -16,11 +16,16 @@
         - Since we are dealing with LARGE Datasets, we ust let them live in their respecitve machines
         - Therefore We Operate the MapReduce function on the Data locally on the respective machines
     
-- Key value Structire of Data in the Intermediatary step:
-    - All the datasets in each local machine are just part of one LArge Dataset
+- Key value Structure of Data in the Intermediatary step:
+    - All the datasets in each local machine are just part of one Large Dataset
     - Therefore there can be many common things between datasets in Different machines
     - Therefore assigning Keys to the values must be done with care, as if different keys are given to same value or data, it can cause Chaos
     - its also easier to reduce to One single value followed by other machines too
 - How to model/architecture handles Network Failures(Idempotency is a Requiremnt):
     - TO handle failures, the Database server/machine redos the mapReduce function to the dataset
     - If there was failure in converting data to key value pairs and the intermediatary stage, the Central Controller will re-perform the Operation then moves on with REDUCE Step, this is possible onlhy when map and reduce function is Idempotent
+
+## Library to use to Implement MapReduce:
+- Hadoop
+## How MapRediuce fuction internally (Illustated with small example):
+![alt text](image-3.png)

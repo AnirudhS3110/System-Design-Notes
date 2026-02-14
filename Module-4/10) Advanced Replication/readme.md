@@ -1,0 +1,1 @@
+- A system's performance is often Dependent on its DB
